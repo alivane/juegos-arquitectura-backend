@@ -6,6 +6,7 @@ class Users(db.Model):
     name = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
     mail = db.Column(db.String, nullable=False)
+    gender = db.Column(db.Integer, nullable=False) ## 0 => masculino, 1 => femenino
 
     def __init__(self, **kwargs):
         super(Users, self).__init__(**kwargs)

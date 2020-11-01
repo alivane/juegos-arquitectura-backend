@@ -26,10 +26,10 @@ def register_error_handler(app):
         return jsonify(e.messages), 400
 
 
-def create_app():
+def create_app(enviroment):
     app = Flask(__name__)
     CORS(app)
-    app.config.from_object(Config)
+    app.config.from_object(enviroment)
 
     db.init_app(app)
     ma.init_app(app)
