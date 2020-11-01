@@ -1,5 +1,5 @@
-# Proyecto_RyC_Backend
-Proyecto RyC backend con flask
+# Juegos de arquitectura
+Juegos de arquitectura con flask
 
 ### INSTALL VIRTUAL ENV
 ```bash
