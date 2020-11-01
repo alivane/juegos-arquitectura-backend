@@ -1,5 +1,5 @@
-from projects import ma
-from projects.models import Users
+from src.projects import ma
+from src.projects.models import Users
 
 
 class UserSchema(ma.SQLAlchemyAutoSchema):

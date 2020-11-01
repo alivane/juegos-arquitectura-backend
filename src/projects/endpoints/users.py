@@ -2,9 +2,9 @@ from datetime import datetime
 import jwt
 from functools import wraps
 from flask import request, jsonify, Blueprint, current_app
-from projects import db, bcrypt
-from projects.models import Users
-from projects.schemas import user_schema
+from src.projects import db, bcrypt
+from src.projects.models import Users
+from src.projects.schemas import user_schema
 import marshmallow
 
 
