@@ -1,11 +1,11 @@
 import os
-from projects.configs import config
 from projects import create_app
+from projects import configs
 
 
-enviroment = config['development']
+enviroment = configs.config['development']
 
 if os.getenv('PRODUCTION', default=False):
-    enviroment = config['production']
+    enviroment = configs.config['production']
 
 app = create_app(enviroment)
