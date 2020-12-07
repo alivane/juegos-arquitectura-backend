@@ -1,6 +1,6 @@
 import os
- from src.projects.configs import config
- from src.projects import create_app
+from src.projects.configs import config
+from src.projects import create_app
 
 
 enviroment = config['development']

@@ -1,4 +1,4 @@
- from src.projects import db, bcrypt
+from src.projects import db, bcrypt
 
 
 class Levels(db.Model):
