@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 from flask_marshmallow import Marshmallow
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
-from  projects.configs import Config
+ from src.projects.configs import Config
 import marshmallow
 
 db = SQLAlchemy()
@@ -14,8 +14,8 @@ bcrypt = Bcrypt()
 
 
 def register_blueprints(app):
-    from  projects.endpoints.users import blueprint as users
-    from  projects.endpoints.status import blueprint as status
+     from src.projects.endpoints.users import blueprint as users
+     from src.projects.endpoints.status import blueprint as status
 
     app.register_blueprint(users)
 

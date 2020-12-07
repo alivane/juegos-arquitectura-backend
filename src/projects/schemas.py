@@ -1,6 +1,6 @@
 from marshmallow import fields
-from  projects import ma
-from  projects.models import Users, Levels, LevelsByUser, Helmets, HelmetsByUser, Avatars, AvatarsByUser
+ from src.projects import ma
+ from src.projects.models import Users, Levels, LevelsByUser, Helmets, HelmetsByUser, Avatars, AvatarsByUser
 
 
 class UserSchema(ma.SQLAlchemyAutoSchema):
