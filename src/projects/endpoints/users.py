@@ -224,3 +224,35 @@ def helmets_register():
     db.session.commit()
 
     return helmets_schema.dump(helmets), 201
+
+
+@blueprint.route('/helmets_by_user_register', methods=['POST'])
+def helmets_by_user_register():
+    helmets = helmets_by_user_schema.load(request.json)
+
+    db.session.add(helmets)
+    db.session.commit()
+
+    return helmets_by_user_schema.dump(helmets), 201
+
+
+@blueprint.route('/helmets_by_user/<id>', methods=['GET'])
+@authentificater
+def helmets_by_user(payload, id):
+    if str(payload['sub']) != str(id):
+        return 'Forbidden', 403
+
+    data = HelmetsByUser.query.filter_by(id_user=id)
+
+    return jsonify(helmets_by_user_schema.dump(data, many=True)), 200
+
+
+@blueprint.route('/levels_by_user_register', methods=['POST'])
+def levels_by_user_register():
+    data = levels_by_user_schema.load(request.json)
+
+    db.session.add(data)
+    db.session.commit()
+
+    return levels_by_user_schema.dump(data), 201
+
