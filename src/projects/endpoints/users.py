@@ -4,8 +4,14 @@ import operator
 from functools import wraps
 from flask import request, jsonify, Blueprint, current_app
 from src.projects import db, bcrypt
-from src.projects.models import Users, Levels, LevelsByUser, Avatars, Helmets
-from src.projects.schemas import user_schema, levels_schema, levels_by_user_schema, helmets_schema, avatars_schema
+from src.projects.models import (
+    Users, Levels, LevelsByUser, Avatars, Helmets,
+    HelmetsByUser
+)
+from src.projects.schemas import (
+    user_schema, levels_schema, levels_by_user_schema, 
+    helmets_schema, avatars_schema, helmets_by_user_schema
+)
 import marshmallow
 
 
